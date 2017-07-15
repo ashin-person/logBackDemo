@@ -2,6 +2,7 @@ package ljx.ashin.controller;
 
 import ljx.ashin.bean.Student;
 import ljx.ashin.service.StudentService;
+import ljx.ashin.utils.PropertiesUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ public class StudentController {
         logger.debug("debug msg");
         id="1";
         logger.info("根据ID:{}查询学生详细信息",id);
+        logger.info("获取的jdbc.url为:{}", PropertiesUtils.getPropertiesValue("jdbc.url","jdbc.properties"));
         if(StringUtils.isNotEmpty(id)){
             student = studentService.findStudentById(Integer.valueOf(id));
             model.addAttribute("student",student);

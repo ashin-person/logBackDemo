@@ -128,17 +128,59 @@
         </encoder>
     </appender>
 
-    <!-- project default level -->
-    <logger name="com.framework" level="debug" />
+    <!-- sql级别日志 appender -->
+    <appender name="sqlAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 过滤器，只记录INFO级别的日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>debug</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <File>${logDir}/sql-log.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <fileNamePattern>${logDir}/%d{yyyy-MM-dd}/info-log.%i.log
+            </fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>${maxHistory}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-    <logger name="com.ibatis" level="debug" />
-    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="info" />
-    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="info" />
-    <logger name="org.mybatis.generator" level="info" />
-    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="info" />
-    <logger name="java.sql.Connection" level="info" />
-    <logger name="java.sql.Statement" level="info" />
-    <logger name="java.sql.PreparedStatement" level="info" />
+
+
+    <logger name="ljx.ashin.dao" level="debug" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <!-- project default level -->
+  <!--  <logger name="com.framework" level="debug" />
+
+    <logger name="com.ibatis" level="debug" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="com.ibatis.common.jdbc.ScriptRunner" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="org.mybatis.generator" level="info"  addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="java.sql.Connection" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="java.sql.Statement" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>
+    <logger name="java.sql.PreparedStatement" level="info" addtivity="false">
+        <appender-ref ref="sqlAppender"/>
+    </logger>-->
 
 
 
