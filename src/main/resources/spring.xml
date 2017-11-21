@@ -34,6 +34,12 @@
     <!-- proxy-target-class默认"false",更改为"ture"使用CGLib动态代理 -->
     <aop:aspectj-autoproxy proxy-target-class="true" />
 
+    <!--手动注入这个切面-->
+    <!--<bean class="ljx.ashin.aspect.SimpleAspect"/>-->
+    <!--<bean class="ljx.ashin.aspect.AdviceAspect"/>-->
+    <!--  <bean class="ljx.ashin.aspect.AspectStyle"/>-->
+    <bean class="ljx.ashin.system.GuardAspect"/>
+
     <import resource="classpath:spring-mybatis.xml" />
     <import resource="classpath:spring-mvc.xml"/>
 

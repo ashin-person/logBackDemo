@@ -131,6 +131,8 @@
       <version>4.12</version>
     </dependency>
 
+
+
     <!--logback日志框架-->
      <dependency>
          <groupId>org.slf4j</groupId>
@@ -151,6 +153,13 @@
          <version>0.9.28</version>
          <type>jar</type>
      </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+
 
     <!--servlet-->
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -198,6 +207,21 @@
       <groupId>commons-cli</groupId>
       <artifactId>commons-cli</artifactId>
       <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>1.7.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.12</version>
     </dependency>
 
 

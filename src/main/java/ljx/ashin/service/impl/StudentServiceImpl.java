@@ -20,11 +20,11 @@ public class StudentServiceImpl implements StudentService {
 
     private Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
     public Student findStudentById(int id) {
-        logger.debug("debug级别需要查询的学生Id为:{}",id);
-        logger.info("info级别需要查询的学生Id为:{}",id);
-        logger.error("erro级别需要查询的学生Id为:{}",id);
+//        logger.debug("debug级别需要查询的学生Id为:{}",id);
+//        logger.info("info级别需要查询的学生Id为:{}",id);
+//        logger.error("erro级别需要查询的学生Id为:{}",id);
         Student student = studentDao.findStudentById(id);
-        logger.info("查询出来的学生信息为:{}",student);
+//        logger.info("查询出来的学生信息为:{}",student);
         return student;
     }
 }

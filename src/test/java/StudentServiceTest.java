@@ -1,4 +1,5 @@
 import ljx.ashin.bean.Student;
+import ljx.ashin.dao.StudentDao;
 import ljx.ashin.service.StudentService;
 import org.junit.Test;
 
@@ -8,6 +9,7 @@ public class StudentServiceTest extends BaseTest{
 	
 	@Resource
 	StudentService studentServiceImpl;
+
 	
 	@Test
 	public void test01(){

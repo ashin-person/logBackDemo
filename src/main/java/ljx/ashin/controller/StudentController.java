@@ -26,10 +26,10 @@ public class StudentController {
     @RequestMapping("/getStudentInfo.controller")
     public String getStudentInfo(String id, Model model){
         Student student = new Student();
-        logger.debug("debug msg");
+//        logger.debug("debug msg");
         id="1";
-        logger.info("根据ID:{}查询学生详细信息",id);
-        logger.info("获取的jdbc.url为:{}", PropertiesUtils.getPropertiesValue("jdbc.url","jdbc.properties"));
+        logger.info("查询学生详细信息的controller");
+//        logger.info("获取的jdbc.url为:{}", PropertiesUtils.getPropertiesValue("jdbc.url","jdbc.properties"));
         if(StringUtils.isNotEmpty(id)){
             student = studentService.findStudentById(Integer.valueOf(id));
             model.addAttribute("student",student);
