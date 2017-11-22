@@ -24,7 +24,7 @@
     <logger name="ljx.ashin.dao" level="debug" addtivity="false">
         <!--<appender-ref ref="STDOUT"/>-->
     </logger>
-    <logger name="ljx.ashin.system.GuardAspect" level="info" addtivity="false">
+    <logger name="ljx.ashin.system.aspect" level="info" addtivity="false">
         <!--<appender-ref ref="file"/>-->
     </logger>
 
@@ -156,12 +156,7 @@
 
 
 
-   <!-- <logger name="ljx.ashin.dao" level="debug" addtivity="false">
-        <appender-ref ref="file"/>
-    </logger>
-    <logger name="ljx.ashin.system.GuardAspect" addtivity="false">
-        <appender-ref ref="file"/>
-    </logger>-->
+
 
 
      <!-- 日志级别 -->
