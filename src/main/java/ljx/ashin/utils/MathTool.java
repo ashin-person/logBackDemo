@@ -7,7 +7,7 @@ public class MathTool {
 
     public static String get4RandomNumber(){
         String randomNum = "";
-        System.currentTimeMillis();
-        return randomNum;
+        int random =(int)((Math.random()*9+1)*1000);
+        return randomNum+random;
     }
 }
